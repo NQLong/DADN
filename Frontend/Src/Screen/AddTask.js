@@ -18,6 +18,7 @@ import CenterButton from '../Component/CenterButton';
 import Context from '../Context/Context';
 import { validation } from '../Context/MyTool';
 import { ToggleField } from '../Context/MyTool';
+import { set_mem } from '../Context/AsyncStorage';
 
 const styles = StyleSheet.create({
     button: {
@@ -145,10 +146,10 @@ export default function CreateTask(props) {
                                 [
                                     BackgroundTimer.setTimeout(() => {
 
-                                        ToggleField(task.field_id, true)
+                                        ToggleField(field_id, true)
                                     }, time_diff),
                                     BackgroundTimer.setTimeout(() => {
-                                        ToggleField(task.field_id, false)
+                                        ToggleField(field_id, false)
                                     }, time_diff + (_duration * 60000)),
                                 ]
                             ]
