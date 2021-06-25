@@ -52,7 +52,7 @@ function userLogin({ navigation }) {
       >
         <Text style={styles.innerbtn}>
           Đăng nhập
-      </Text>
+        </Text>
       </TouchableHighlight>
 
       <View>
@@ -62,7 +62,14 @@ function userLogin({ navigation }) {
             onPress={() => { stack_navigate('ForgotPassScreen', {}) }}
           >
             Lấy lại mật khẩu
+          </Text>
         </Text>
+      </View>
+      <View>
+        <Text style={[styles.innerText, {alignSelf:"center", fontSize:20}]}
+          onPress={() => { stack_navigate('ForgotPassScreen', {}) }}
+        >
+          Đăng ký
         </Text>
       </View>
     </SafeAreaView>
