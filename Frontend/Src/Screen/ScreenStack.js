@@ -51,8 +51,9 @@ import DrawerContent from "../Component/DrawerContent"
 import ScheduleIrrigation from './ScheduleIrrigation';
 import BackgroundTimer from 'react-native-background-timer';
 import CreateTask from './AddTask';
+import SignUp from './SignUp';
 const Stack = createStackNavigator();
-export default function ScreensStack  (props)  {
+export default function ScreensStack(props) {
 	return (
 		// <NavigationContainer ref={stack_navigation_ref} >
 		<Stack.Navigator initialRouteName='HomePageScreen'>
@@ -131,6 +132,13 @@ export default function ScreensStack  (props)  {
 				component={CreateTask}
 				options={{
 					headerTitle: _props => <Header {..._props} {...props} label="New timer" />
+				}}
+			/>
+			<Stack.Screen
+				name="SignUp"
+				component={SignUp}
+				options={{
+					headerShown: false
 				}}
 			/>
 		</Stack.Navigator>
